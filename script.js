@@ -23,7 +23,7 @@ function addTask(){
     var time = document.forms["inputForm"]["time"].value;
     
     if(isTaskExiste(task) === task){
-        return console.log("false")
+        document.getElementById('error_msg').innerHTML = 'This task alredy exist';
     }else{
         arr.push(createTask(task,date,time));
         var myContainer = document.getElementById("liContainer");
@@ -31,6 +31,7 @@ function addTask(){
         li.className = "listyle"
         li.innerHTML = "<i class='fas fa-times' onclick='removeNote(this)'></i>" +"<div class= 'taskContainer'><span>"+task+"</span></div>"+"<div class='dateAndTimeS'>"+"<span>"+date + "</span>"+ "<span>" + time +"</span></div>"
         myContainer.append(li)
+        document.getElementById('error_msg').innerHTML = '';
 
     }
     
