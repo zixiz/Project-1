@@ -1,0 +1,83 @@
+h1.myFont{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.shulayim {
+    border: 1px solid #0f5aa5;
+    border-left: 0;
+    border-right: 0;
+    background-color: #fcfcfc;
+}
+
+
+// Bootstrap form runover
+.form-control, {
+    border-radius:0;
+    border:1px solid #0f5aa5;
+    border-left-color: red !important;
+    
+}
+.form-control:focus {
+    outline: none;
+    box-shadow:none !important;
+    background-color: #fcfcfc;
+    border:1px solid #0f5aa5;
+}
+
+
+input[type="text"], textarea, input:focus, input[type=date], input[type=datetime-local], input[type=month], input[type=time] {
+    outline: none !important;
+    border:1px solid #0f5aa5;
+    border-right: 0 !important;
+    background-color: #fcfcfc;
+    box-shadow:none !important;
+
+}
+
+.removeTopBorder {
+    border-top: 0 !important;
+}
+
+.form-control:disabled, .form-control[readonly]{
+    background-color: #fcfcfc;
+    opacity: 1;
+}
+
+body {
+    background-image: url("img/body-background.jpg");
+}
+.buttoNdesign{
+    background:#ffc;
+    height:3em;
+    /* Firefox */
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+    /* Safari+Chrome */
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    /* Opera */
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+.listyle {
+    background:#ffc !important;
+    display:inline-block !important;
+    height:12em !important;
+    width:12em !important;
+    padding:1em !important;
+    margin: 1em;
+    overflow: auto;
+    position: relative;
+    list-style-type: none;
+    word-wrap: break-word;
+    /* Firefox */
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+    /* Safari+Chrome */
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    /* Opera */
+    box-shadow: 5px 5px 7px rgba(33,33,33,1);
+} 
+.dateAndTimeS{
+    bottom: 0px !important;
+    position: absolute !important;
+}
+.fas{
+    float: right;
+}
