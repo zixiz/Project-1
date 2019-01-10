@@ -123,6 +123,13 @@ body {
 }
 .fas {
   float: right;
+  
+}
+#exitIcon{
+  display: none;
+}
+li:hover #exitIcon{
+  display: unset;
 }
 .error_msg_style {
   text-align: center;

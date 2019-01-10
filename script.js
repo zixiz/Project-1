@@ -28,9 +28,9 @@ function addTask(){
         arr.push(createTask(task,date,time));
         var myContainer = document.getElementById("liContainer");
         var li = document.createElement("li");
-        li.className = "listyle"
-        li.innerHTML = "<i class='fas fa-times' onclick='removeNote(this)'></i>" +"<div class= 'taskContainer'><span>"+task+"</span></div>"+"<div class='dateAndTimeS'>"+"<span>"+date + "</span>"+ "<span>" + time +"</span></div>"
-        myContainer.append(li)
+        li.className = "listyle";
+        li.innerHTML = "<i id='exitIcon' class='fas fa-times' onclick='removeNote(this)'></i>" +"<div class= 'taskContainer'><span>"+task+"</span></div>"+"<div class='dateAndTimeS'>"+"<span>"+date + "</span>"+ "<span>" + time +"</span></div>"
+        myContainer.append(li);
         document.getElementById('error_msg').innerHTML = '';
 
     }
@@ -38,6 +38,12 @@ function addTask(){
 
 }
 function removeNote(x){
-    x.parentElement.parentElement.removeChild(x.parentElement);
-    
+    var localTask = x.parentElement.children[1].children[0].innerHTML;
+    var localDate = x.parentElement.children[2].children[0].innerHTML;
+    for(var i =0; i<arr.length;i++){
+        if(localTask == arr[i].task && localDate == arr[i].date){
+            arr.splice(i, 1);
+        }
+    }
+    x.parentElement.parentElement.removeChild(x.parentElement);  
 }
