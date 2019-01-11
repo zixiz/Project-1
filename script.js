@@ -12,7 +12,7 @@ function createTask(task, date,hour) {
 function isTaskExiste(task){
     for(var i = 0; i < arr.length;i++){
         if(task == arr[i].task){
-            return true
+            return true;
         }
     }
 }
@@ -49,6 +49,7 @@ function addTask(){
         document.getElementById('error_msg').innerHTML = 'This task alredy exists';
     }else{
         arr.push(createTask(task,date,time));
+        clearForm()
         // localStorage.setItem("localstorageArr", JSON.stringify(arr));
         var myContainer = document.getElementById("liContainer");
         var li = document.createElement("li");
