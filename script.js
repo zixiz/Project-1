@@ -74,3 +74,7 @@ function removeNote(x){
     x.parentElement.parentElement.removeChild(x.parentElement);  
 }
 
+function removeAllNotes(){
+    arr = [];
+    document.getElementById('liContainer').innerHTML = '';
+}
