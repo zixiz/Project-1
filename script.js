@@ -16,18 +16,21 @@ function isTaskExiste(task){
         }
     }
 }
-// function backUp(){
-//     var backup = JSON.parse(localStorage.getItem("localstorageArr"))
-//     if(backup.length > 0){
-//         for(var i = 0;i<backUp.length;i++){
-//             var myContainer = document.getElementById("liContainer");
-//             var li = document.createElement("li");
-//             li.className = "listyle";
-//         li.innerHTML = "<i id='exitIcon' class='fas fa-times' onclick='removeNote(this)'></i>" +"<div class= 'taskContainer'><span>"+task+"</span></div>"+"<div class='dateAndTimeS'>"+"<span>"+date + "</span>"+ "<span>" + time +"</span></div>"
-//         myContainer.append(li);
-//         }
-//     }
-// }
+function backUp(){
+    console.log("insis")
+    var backup = JSON.parse(localStorage.getItem("localstorageArr"))
+    if(backup.length > 0){
+        arr = backup;
+        for(var i = 0; i< backup.length;i++){
+            var myContainer = document.getElementById("liContainer");
+            var li = document.createElement("li");
+            li.className = "listyle";
+            li.innerHTML = "<i id='exitIcon' class='fas fa-times' onclick='removeNote(this)'></i>" +"<div class= 'taskContainer'><span>"+backup[i].task+"</span></div>"+"<div class='dateAndTimeS'>"+"<span>"+backup[i].date + "</span>"+ "<span>" + backup[i].time +"</span></div>"
+            myContainer.append(li);
+        }
+    }
+}
+backUp();
 function clearForm(){
     document.forms["inputForm"]["task"].value = "";
     document.forms["inputForm"]["date"].value = "";
@@ -50,7 +53,7 @@ function addTask(){
     }else{
         arr.push(createTask(task,date,time));
         clearForm()
-        // localStorage.setItem("localstorageArr", JSON.stringify(arr));
+        localStorage.setItem("localstorageArr", JSON.stringify(arr));
         var myContainer = document.getElementById("liContainer");
         var li = document.createElement("li");
         li.className = "listyle";
@@ -59,7 +62,7 @@ function addTask(){
         document.getElementById('error_msg').innerHTML = '';
 
     }
-    
+
 
 }
 function removeNote(x){
@@ -68,7 +71,7 @@ function removeNote(x){
     for(var i =0; i<arr.length;i++){
         if(localTask == arr[i].task && localDate == arr[i].date){
             arr.splice(i, 1);
-            // localStorage.setItem("localstorageArr", JSON.stringify(arr));
+            localStorage.setItem("localstorageArr", JSON.stringify(arr));
         }
     }
     x.parentElement.parentElement.removeChild(x.parentElement);  

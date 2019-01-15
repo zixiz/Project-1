@@ -129,4 +129,9 @@ li:hover #exitIcon {
   color: red;
   background: antiquewhite;
 }
+
+#formContainer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 /*# sourceMappingURL=style.css.map */
