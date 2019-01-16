@@ -17,7 +17,6 @@ function isTaskExiste(task){
     }
 }
 function backUp(){
-    console.log("insis")
     var backup = JSON.parse(localStorage.getItem("localstorageArr"))
     if(backup.length > 0){
         arr = backup;
@@ -80,4 +79,5 @@ function removeNote(x){
 function removeAllNotes(){
     arr = [];
     document.getElementById('liContainer').innerHTML = '';
+    localStorage.setItem("localstorageArr", JSON.stringify(arr));
 }
