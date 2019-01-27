@@ -36,6 +36,7 @@ input[type="time"] {
   background-color: #fcfcfc;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+  border-collapse: collapse;
 }
 
 .removeTopBorder {

@@ -39,6 +39,7 @@ input[type="time"] {
   border-right: 0 !important;
   background-color: $form-background-white;
   box-shadow: none !important;
+  border-collapse: collapse;
 }
 
 .removeTopBorder {

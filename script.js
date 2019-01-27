@@ -20,7 +20,10 @@ function isTaskExiste(task){
 // LocalStorage backup function
 function backUp(){
     var backup = JSON.parse(localStorage.getItem("localstorageArr"))
-    if(backup.length > 0){
+    if(backup == null){
+        return false;
+    }
+    else if(backup.length > 0){
         arr = backup;
         for(var i = 0; i< backup.length;i++){
             var myContainer = document.getElementById("liContainer");
